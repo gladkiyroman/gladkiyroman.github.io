@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <title> Landing Page </title>
+<link rel="stylesheet" type="text/css" href="E:\hiking web\css\homestyle.css">
+<link rel="stylesheet" type="text/css" href="E:\hiking web\css\signup.css">
+<script>
+// Get the modal
+
+  var modal = document.getElementById('id01');
+function SignF(){
+    <a href="E:/hiking web/html/homestyle.html"></a>
+}
+
+  function validateForm() {
+      var x = document.forms["myForm"]["name"].value;
+      if (x == "") {
+          alert("Name must be filled out");
+          return false;
+      }
+      var email = document.forms["myForm"]["email"].value;
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(!email.match(mailformat)){
+          alert("incorrect email");
+      return false;}
+      var pass1=document.forms["myForm"]["password1"].value;
+        var pass2=document.forms["myForm"]["password2"].value;
+        if(pass1!=pass2)
+        {
+            alert("pass1!=pass2");
+        return false;}
+
+
+
+
+}
+
+
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+  <source src="E:\hiking web\imgRef\vidland.mp4" type="video/mp4">
+</video>
+<a id="homebtn" href="E:\hiking web\html\homepage.html"> <h1> Hiking in</h1><br> Ukraine</a>
+
+
+<!--sign up form-->
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form name="myForm" class="modal-content" action="/action_page.php"
+  onsubmit="return validateForm()" method="post">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label  for="name" ><b>Name</b></label>
+      <input type="text" name="name" class="form-control"  placeholder="Enter Nickname">
+
+
+      <label  for="email"><b>Email</b></label>
+      <input name="email" type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input name="password1" type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input name="password2" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+          <label for="gender"><b>Gender</b></label>
+              <select >
+                <option default></option>
+                  <option><b>Male</b></option>
+                  <option><b>Female</b></option>
+              </select>
+
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+
+
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id="sign" type="submit" onclick="SignF()" class="signupbtn" >Sign up</button>
+      </div>
+
+
+    </div>
+
+
+  </form>
+</div>
+
+
+
+<div class="content">
+    <button id="myBtn" onclick="myFunction()">||</button>
+
+  <button id="signBtn" onclick="document.getElementById('id01').style.display='block'"
+  style="width:auto;">Sign up</button>
+
+
+
+  <nav class="navigation-bar">
+<ul>
+
+  <li>  <a href="E:\hiking web\html\about.html">About</a></li>
+  <li>  <a href="E:\hiking web\html\trale.html">Hiking Trales</a></li>
+  <li>  <a href="E:\hiking web\html\inspiration.html">Inspiration</a></li>
+  <li>  <a href="E:\hiking web\html\getInT.html">Contact</a></li>
+</ul>
+  </nav>
+</div>
+
+
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "||";
+    } else {
+        video.pause();
+        btn.innerHTML = "&#9658";
+    }
+}
+</script>
+</body>
+</html>
